@@ -10,7 +10,8 @@ OBJ = \
 	  dbus/dbus-bus.o \
 	  dbus/dbus-connection.o \
 	  dbus/dbus-errors.o \
-	  dbus/dbus-memory.o
+	  dbus/dbus-memory.o \
+	  dbus/dbus-misc.o
 
 all: libdbus.so
 

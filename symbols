@@ -87,8 +87,8 @@ DONE dbus_error_init
 DONE dbus_error_is_set
 DONE dbus_free
 DONE dbus_free_string_array
-dbus_get_local_machine_id
-dbus_get_version
+DONE dbus_get_local_machine_id
+DONE dbus_get_version
 DONE dbus_malloc
 DONE dbus_malloc0
 dbus_message_allocate_data_slot
@@ -202,7 +202,7 @@ dbus_server_unref
 DONE dbus_set_error
 DONE dbus_set_error_const
 dbus_set_error_from_message
-dbus_setenv
+DONE dbus_setenv
 DONE dbus_shutdown
 dbus_signature_iter_get_current_type
 dbus_signature_iter_get_element_type
@@ -219,7 +219,7 @@ dbus_timeout_get_enabled
 dbus_timeout_get_interval
 dbus_timeout_handle
 dbus_timeout_set_data
-dbus_try_get_local_machine_id
+DONE dbus_try_get_local_machine_id
 dbus_type_is_basic
 dbus_type_is_container
 dbus_type_is_fixed
