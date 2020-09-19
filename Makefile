@@ -11,7 +11,8 @@ OBJ = \
 	  dbus/dbus-connection.o \
 	  dbus/dbus-errors.o \
 	  dbus/dbus-memory.o \
-	  dbus/dbus-misc.o
+	  dbus/dbus-misc.o \
+	  dbus/dbus-message.o
 
 all: libdbus.so
 
