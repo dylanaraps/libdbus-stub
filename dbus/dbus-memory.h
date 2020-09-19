@@ -14,6 +14,38 @@ extern "C" {
 
 typedef void(* DBusFreeFunction)(void *memory);
 
+// TODO: __attribute__ malloc?
+void* dbus_malloc(
+    size_t bytes
+);
+
+// TODO: __attribute__ malloc?
+// TODO: alloc size?
+void* dbus_malloc0(
+    size_t bytes
+);
+
+// TODO: alloc size?
+void* dbus_realloc(
+    void *memory,
+    size_t bytes
+);
+
+void dbus_free(
+    void *memory
+);
+
+#define dbus_new(type, count)  ((type*)dbus_malloc (sizeof (type) * (count)))
+#define dbus_new0(type, count) ((type*)dbus_malloc0 (sizeof (type) * (count)))
+
+void dbus_free_string_array(
+    char **str_array
+);
+
+void dbus_shutdown(
+    void
+);
+
 #ifdef __cplusplus
 }
 #endif

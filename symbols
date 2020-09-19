@@ -85,12 +85,12 @@ DONE dbus_error_free
 DONE dbus_error_has_name
 DONE dbus_error_init
 DONE dbus_error_is_set
-dbus_free
-dbus_free_string_array
+DONE dbus_free
+DONE dbus_free_string_array
 dbus_get_local_machine_id
 dbus_get_version
-dbus_malloc
-dbus_malloc0
+DONE dbus_malloc
+DONE dbus_malloc0
 dbus_message_allocate_data_slot
 dbus_message_append_args
 dbus_message_append_args_valist
@@ -183,7 +183,7 @@ dbus_pending_call_set_data
 dbus_pending_call_set_notify
 dbus_pending_call_steal_reply
 dbus_pending_call_unref
-dbus_realloc
+DONE dbus_realloc
 dbus_server_allocate_data_slot
 dbus_server_disconnect
 dbus_server_free_data_slot
@@ -203,7 +203,7 @@ DONE dbus_set_error
 DONE dbus_set_error_const
 dbus_set_error_from_message
 dbus_setenv
-dbus_shutdown
+DONE dbus_shutdown
 dbus_signature_iter_get_current_type
 dbus_signature_iter_get_element_type
 dbus_signature_iter_get_signature
