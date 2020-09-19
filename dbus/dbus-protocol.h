@@ -101,6 +101,121 @@ extern "C" {
 
 #define DBUS_MINIMUM_HEADER_SIZE 16
 
+#define DBUS_ERROR_FAILED            "org.freedesktop.DBus.Error.Failed"
+#define DBUS_ERROR_NO_MEMORY         "org.freedesktop.DBus.Error.NoMemory"
+#define DBUS_ERROR_SERVICE_UNKNOWN   "org.freedesktop.DBus.Error.ServiceUnknown"
+#define DBUS_ERROR_NAME_HAS_NO_OWNER "org.freedesktop.DBus.Error.NameHasNoOwner"
+#define DBUS_ERROR_NO_REPLY          "org.freedesktop.DBus.Error.NoReply"
+#define DBUS_ERROR_IO_ERROR          "org.freedesktop.DBus.Error.IOError"
+#define DBUS_ERROR_BAD_ADDRESS       "org.freedesktop.DBus.Error.BadAddress"
+#define DBUS_ERROR_NOT_SUPPORTED     "org.freedesktop.DBus.Error.NotSupported"
+#define DBUS_ERROR_LIMITS_EXCEEDED   "org.freedesktop.DBus.Error.LimitsExceeded"
+#define DBUS_ERROR_ACCESS_DENIED     "org.freedesktop.DBus.Error.AccessDenied"
+#define DBUS_ERROR_AUTH_FAILED       "org.freedesktop.DBus.Error.AuthFailed"
+#define DBUS_ERROR_NO_SERVER         "org.freedesktop.DBus.Error.NoServer"
+#define DBUS_ERROR_TIMEOUT           "org.freedesktop.DBus.Error.Timeout"
+#define DBUS_ERROR_NO_NETWORK        "org.freedesktop.DBus.Error.NoNetwork"
+#define DBUS_ERROR_ADDRESS_IN_USE    "org.freedesktop.DBus.Error.AddressInUse"
+#define DBUS_ERROR_DISCONNECTED      "org.freedesktop.DBus.Error.Disconnected"
+#define DBUS_ERROR_INVALID_ARGS      "org.freedesktop.DBus.Error.InvalidArgs"
+#define DBUS_ERROR_FILE_NOT_FOUND    "org.freedesktop.DBus.Error.FileNotFound"
+#define DBUS_ERROR_FILE_EXISTS       "org.freedesktop.DBus.Error.FileExists"
+#define DBUS_ERROR_UNKNOWN_METHOD    "org.freedesktop.DBus.Error.UnknownMethod"
+#define DBUS_ERROR_UNKNOWN_OBJECT    "org.freedesktop.DBus.Error.UnknownObject"
+
+#define DBUS_ERROR_UNKNOWN_INTERFACE \
+    "org.freedesktop.DBus.Error.UnknownInterface"
+
+#define DBUS_ERROR_UNKNOWN_PROPERTY \
+    "org.freedesktop.DBus.Error.UnknownProperty"
+
+#define DBUS_ERROR_PROPERTY_READ_ONLY \
+    "org.freedesktop.DBus.Error.PropertyReadOnly"
+
+#define DBUS_ERROR_TIMED_OUT \
+    "org.freedesktop.DBus.Error.TimedOut"
+
+#define DBUS_ERROR_MATCH_RULE_NOT_FOUND \
+    "org.freedesktop.DBus.Error.MatchRuleNotFound"
+
+#define DBUS_ERROR_MATCH_RULE_INVALID \
+    "org.freedesktop.DBus.Error.MatchRuleInvalid"
+
+#define DBUS_ERROR_SPAWN_EXEC_FAILED  \
+    "org.freedesktop.DBus.Error.Spawn.ExecFailed"
+
+#define DBUS_ERROR_SPAWN_FORK_FAILED \
+    "org.freedesktop.DBus.Error.Spawn.ForkFailed"
+
+#define DBUS_ERROR_SPAWN_CHILD_EXITED \
+    "org.freedesktop.DBus.Error.Spawn.ChildExited"
+
+#define DBUS_ERROR_SPAWN_CHILD_SIGNALED \
+    "org.freedesktop.DBus.Error.Spawn.ChildSignaled"
+
+#define DBUS_ERROR_SPAWN_FAILED \
+    "org.freedesktop.DBus.Error.Spawn.Failed"
+
+#define DBUS_ERROR_SPAWN_SETUP_FAILED \
+    "org.freedesktop.DBus.Error.Spawn.FailedToSetup"
+
+#define DBUS_ERROR_SPAWN_CONFIG_INVALID \
+    "org.freedesktop.DBus.Error.Spawn.ConfigInvalid"
+
+#define DBUS_ERROR_SPAWN_SERVICE_INVALID \
+    "org.freedesktop.DBus.Error.Spawn.ServiceNotValid"
+
+#define DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND \
+    "org.freedesktop.DBus.Error.Spawn.ServiceNotFound"
+
+#define DBUS_ERROR_SPAWN_PERMISSIONS_INVALID \
+    "org.freedesktop.DBus.Error.Spawn.PermissionsInvalid"
+
+#define DBUS_ERROR_SPAWN_FILE_INVALID \
+    "org.freedesktop.DBus.Error.Spawn.FileInvalid"
+
+#define DBUS_ERROR_SPAWN_NO_MEMORY \
+    "org.freedesktop.DBus.Error.Spawn.NoMemory"
+
+#define DBUS_ERROR_UNIX_PROCESS_ID_UNKNOWN \
+    "org.freedesktop.DBus.Error.UnixProcessIdUnknown"
+
+#define DBUS_ERROR_INVALID_SIGNATURE \
+    "org.freedesktop.DBus.Error.InvalidSignature"
+
+#define DBUS_ERROR_INVALID_FILE_CONTENT \
+    "org.freedesktop.DBus.Error.InvalidFileContent"
+
+#define DBUS_ERROR_SELINUX_SECURITY_CONTEXT_UNKNOWN \
+    "org.freedesktop.DBus.Error.SELinuxSecurityContextUnknown"
+
+#define DBUS_ERROR_ADT_AUDIT_DATA_UNKNOWN \
+    "org.freedesktop.DBus.Error.AdtAuditDataUnknown"
+
+#define DBUS_ERROR_OBJECT_PATH_IN_USE \
+    "org.freedesktop.DBus.Error.ObjectPathInUse"
+
+#define DBUS_ERROR_INCONSISTENT_MESSAGE \
+    "org.freedesktop.DBus.Error.InconsistentMessage"
+
+#define DBUS_ERROR_INTERACTIVE_AUTHORIZATION_REQUIRED \
+    "org.freedesktop.DBus.Error.InteractiveAuthorizationRequired"
+
+#define DBUS_ERROR_NOT_CONTAINER \
+    "org.freedesktop.DBus.Error.NotContainer"
+
+#define DBUS_INTROSPECT_1_0_XML_NAMESPACE \
+    "http://www.freedesktop.org/standards/dbus"
+
+#define DBUS_INTROSPECT_1_0_XML_PUBLIC_IDENTIFIER \
+    "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+
+#define DBUS_INTROSPECT_1_0_XML_SYSTEM_IDENTIFIER \
+    "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd"
+
+#define DBUS_INTROSPECT_1_0_XML_DOCTYPE_DECL_NODE \
+    "<!DOCTYPE node PUBLIC \"" DBUS_INTROSPECT_1_0_XML_PUBLIC_IDENTIFIER "\"\n\"" DBUS_INTROSPECT_1_0_XML_SYSTEM_IDENTIFIER "\">\n"
+
 #ifdef __cplusplus
 }
 #endif
