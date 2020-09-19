@@ -35,13 +35,13 @@ void dbus_connection_close(
 dbus_bool_t dbus_connection_get_is_connected(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_is_authenticated(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_is_anonymous(
