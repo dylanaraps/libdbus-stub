@@ -19,15 +19,15 @@ OBJ = \
 	  dbus/dbus-syntax.o \
 	  dbus/dbus-threads.o
 
-all: libdbus.so
+all: libdbus-1.so
 
 .c.o:
 	$(CC) $(XCFLAGS) -c -o $@ $<
 
-libdbus.so: $(OBJ)
-	$(CC) $(XCFLAGS) -o $@ $(OBJ) $(LDFLAGS) -shared -Wl,-soname,libdbus.so.1
+libdbus-1.so: $(OBJ)
+	$(CC) $(XCFLAGS) -o $@ $(OBJ) $(LDFLAGS) -shared -Wl,-soname,libdbus-1.so.1
 
 clean:
-	rm -f libdbus.* $(OBJ)
+	rm -f libdbus-1.* $(OBJ)
 
 .PHONY: all clea
