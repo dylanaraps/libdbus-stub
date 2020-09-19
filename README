@@ -7,6 +7,7 @@ TODO:
 - [ ] Figure out where we want to spoof return values.
 - [ ] Finalize headers for dbus.h.
 - [ ] Figure out what else is missing.
+- [ ] Make pkg-config file configurable.
 
 
 Application support:
