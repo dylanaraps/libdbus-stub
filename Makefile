@@ -15,7 +15,8 @@ OBJ = \
 	  dbus/dbus-message.o \
 	  dbus/dbus-pending-call.o \
 	  dbus/dbus-server.o \
-	  dbus/dbus-signature.o
+	  dbus/dbus-signature.o \
+	  dbus/dbus-threads.o
 
 all: libdbus.so
 

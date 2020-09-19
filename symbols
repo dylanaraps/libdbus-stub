@@ -212,8 +212,8 @@ DONE dbus_signature_iter_next
 DONE dbus_signature_iter_recurse
 DONE dbus_signature_validate
 DONE dbus_signature_validate_single
-dbus_threads_init
-dbus_threads_init_default
+DONE dbus_threads_init
+DONE dbus_threads_init_default
 DONE dbus_timeout_get_data
 DONE dbus_timeout_get_enabled
 DONE dbus_timeout_get_interval
