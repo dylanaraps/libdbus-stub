@@ -2,7 +2,9 @@
 
 DBusPendingCall* dbus_pending_call_ref(
     DBusPendingCall *pending
-);
+) {
+    return NULL;
+}
 
 void dbus_pending_call_unref(
     DBusPendingCall *pending
