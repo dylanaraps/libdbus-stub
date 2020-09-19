@@ -397,3 +397,156 @@ void dbus_connection_send_preallocated(
 ) {
 
 }
+
+dbus_bool_t dbus_connection_try_register_object_path(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data,
+    DBusError *error
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_register_object_path(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_try_register_fallback(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data,
+    DBusError *error
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_register_fallback(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_unregister_object_path(
+    DBusConnection *connection,
+    const char *path
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_get_object_path_data(
+    DBusConnection *connection,
+    const char *path,
+    void **data_p
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_list_registered(
+    DBusConnection *connection,
+    const char *parent_path,
+    char ***child_entries
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_get_unix_fd(
+    DBusConnection *connection,
+    int *fd
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_connection_get_socket(
+    DBusConnection *connection,
+    int *fd
+) {
+    return FALSE;
+}
+
+int dbus_watch_get_unix_fd(
+    DBusWatch *watch
+) {
+    return -1;
+}
+
+int dbus_watch_get_socket(
+    DBusWatch *watch
+) {
+    return -1;
+}
+
+unsigned int dbus_watch_get_flags(
+    DBusWatch *watch
+) {
+    return 0;
+}
+
+void* dbus_watch_get_data(
+    DBusWatch *watch
+) {
+    return NULL;
+}
+
+void dbus_watch_set_data(
+    DBusWatch *watch,
+    void *data,
+    DBusFreeFunction free_data_function
+) {
+
+}
+
+dbus_bool_t dbus_watch_handle(
+    DBusWatch *watch,
+    unsigned int flags
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_watch_get_enabled(
+    DBusWatch *watch
+) {
+    return FALSE;
+}
+
+int dbus_timeout_get_interval(
+    DBusTimeout *timeout
+) {
+    return 0;
+}
+
+void* dbus_timeout_get_data(
+    DBusTimeout *timeout
+) {
+    return NULL;
+}
+
+void dbus_timeout_set_data(
+    DBusTimeout *timeout,
+    void *data,
+    DBusFreeFunction free_data_function
+) {
+
+}
+
+dbus_bool_t dbus_timeout_handle(
+    DBusTimeout *timeout
+) {
+    return FALSE;
+}
+
+dbus_bool_t dbus_timeout_get_enabled(
+    DBusTimeout *timeout
+) {
+    return FALSE;
+}
+

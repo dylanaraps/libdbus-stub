@@ -201,7 +201,7 @@ DONE dbus_server_set_watch_functions
 DONE dbus_server_unref
 DONE dbus_set_error
 DONE dbus_set_error_const
-dbus_set_error_from_message
+DONE dbus_set_error_from_message
 DONE dbus_setenv
 DONE dbus_shutdown
 DONE dbus_signature_iter_get_current_type
@@ -214,27 +214,27 @@ DONE dbus_signature_validate
 DONE dbus_signature_validate_single
 dbus_threads_init
 dbus_threads_init_default
-dbus_timeout_get_data
-dbus_timeout_get_enabled
-dbus_timeout_get_interval
-dbus_timeout_handle
-dbus_timeout_set_data
+DONE dbus_timeout_get_data
+DONE dbus_timeout_get_enabled
+DONE dbus_timeout_get_interval
+DONE dbus_timeout_handle
+DONE dbus_timeout_set_data
 DONE dbus_try_get_local_machine_id
-dbus_type_is_basic
-dbus_type_is_container
-dbus_type_is_fixed
-dbus_type_is_valid
+DONE dbus_type_is_basic
+DONE dbus_type_is_container
+DONE dbus_type_is_fixed
+DONE dbus_type_is_valid
 dbus_validate_bus_name
 dbus_validate_error_name
 dbus_validate_interface
 dbus_validate_member
 dbus_validate_path
 dbus_validate_utf8
-dbus_watch_get_data
-dbus_watch_get_enabled
-dbus_watch_get_fd
-dbus_watch_get_flags
-dbus_watch_get_socket
-dbus_watch_get_unix_fd
-dbus_watch_handle
-dbus_watch_set_data
+DONE dbus_watch_get_data
+DONE dbus_watch_get_enabled
+DONE dbus_watch_get_fd
+DONE dbus_watch_get_flags
+DONE dbus_watch_get_socket
+DONE dbus_watch_get_unix_fd
+DONE dbus_watch_handle
+DONE dbus_watch_set_data

@@ -134,7 +134,6 @@ dbus_bool_t dbus_connection_can_send_type(
     int type
 );
 
-
 void dbus_connection_set_exit_on_disconnect(
     DBusConnection *connection,
     dbus_bool_t exit_on_disconnect
@@ -376,6 +375,116 @@ void dbus_connection_send_preallocated(
     DBusPreallocatedSend *preallocated,
     DBusMessage *message,
     dbus_uint32_t *client_serial
+);
+
+dbus_bool_t dbus_connection_try_register_object_path(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data,
+    DBusError *error
+);
+
+dbus_bool_t dbus_connection_register_object_path(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data
+);
+
+dbus_bool_t dbus_connection_try_register_fallback(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data,
+    DBusError *error
+);
+
+dbus_bool_t dbus_connection_register_fallback(
+    DBusConnection *connection,
+    const char *path,
+    const DBusObjectPathVTable *vtable,
+    void *user_data
+);
+
+dbus_bool_t dbus_connection_unregister_object_path(
+    DBusConnection *connection,
+    const char *path
+);
+
+dbus_bool_t dbus_connection_get_object_path_data(
+    DBusConnection *connection,
+    const char *path,
+    void **data_p
+);
+
+dbus_bool_t dbus_connection_list_registered(
+    DBusConnection *connection,
+    const char *parent_path,
+    char ***child_entries
+);
+
+dbus_bool_t dbus_connection_get_unix_fd(
+    DBusConnection *connection,
+    int *fd
+);
+
+dbus_bool_t dbus_connection_get_socket(
+    DBusConnection *connection,
+    int *fd
+);
+
+int dbus_watch_get_unix_fd(
+    DBusWatch *watch
+);
+
+int dbus_watch_get_socket(
+    DBusWatch *watch
+);
+
+unsigned int dbus_watch_get_flags(
+    DBusWatch *watch
+);
+
+void* dbus_watch_get_data(
+    DBusWatch *watch
+);
+
+void dbus_watch_set_data(
+    DBusWatch *watch,
+    void *data,
+    DBusFreeFunction free_data_function
+);
+
+dbus_bool_t dbus_watch_handle(
+    DBusWatch *watch,
+    unsigned int flags
+);
+
+dbus_bool_t dbus_watch_get_enabled(
+    DBusWatch *watch
+);
+
+int dbus_timeout_get_interval(
+    DBusTimeout *timeout
+);
+
+void* dbus_timeout_get_data(
+    DBusTimeout *timeout
+);
+
+void dbus_timeout_set_data(
+    DBusTimeout *timeout,
+    void *data,
+    DBusFreeFunction free_data_function
+);
+
+dbus_bool_t dbus_timeout_handle(
+    DBusTimeout *timeout
+);
+
+dbus_bool_t dbus_timeout_get_enabled(
+    DBusTimeout *timeout
 );
 
 #ifdef __cplusplus
