@@ -4,3 +4,10 @@ libdbus stub library to appease dbus dependency
 TODO:
 
 - [ ] Go through ./symbols and implement stubs for everything.
+- [ ] Figure out where we want to spoof return values.
+- [ ] Finalize headers for dbus.h.
+
+
+Application support:
+
+- TODO
