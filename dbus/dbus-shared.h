@@ -11,6 +11,11 @@ typedef enum {
     DBUS_BUS_STARTER
 } DBusBusType;
 
+typedef enum  {
+    DBUS_HANDLER_RESULT_HANDLED,
+    DBUS_HANDLER_RESULT_NOT_YET_HANDLED,
+    DBUS_HANDLER_RESULT_NEED_MEMORY
+} DBusHandlerResult;
 
 #ifdef __cplusplus
 }

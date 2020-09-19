@@ -7,6 +7,8 @@
 
 #include <stdint.h>
 
+typedef  int32_t dbus_int32_t;
+typedef uint32_t dbus_uint32_t;
 typedef uint32_t dbus_unichar_t;
 typedef uint32_t dbus_bool_t;
 
