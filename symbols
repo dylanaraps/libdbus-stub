@@ -3,19 +3,19 @@ DONE dbus_address_entry_get_method
 DONE dbus_address_entry_get_value
 DONE dbus_address_escape_value
 DONE dbus_address_unescape_value
-dbus_bus_add_match
-dbus_bus_get
-dbus_bus_get_id
-dbus_bus_get_private
-dbus_bus_get_unique_name
-dbus_bus_get_unix_user
-dbus_bus_name_has_owner
-dbus_bus_register
-dbus_bus_release_name
-dbus_bus_remove_match
-dbus_bus_request_name
-dbus_bus_set_unique_name
-dbus_bus_start_service_by_name
+DONE dbus_bus_add_match
+DONE dbus_bus_get
+DONE dbus_bus_get_id
+DONE dbus_bus_get_private
+DONE dbus_bus_get_unique_name
+DONE dbus_bus_get_unix_user
+DONE dbus_bus_name_has_owner
+DONE dbus_bus_register
+DONE dbus_bus_release_name
+DONE dbus_bus_remove_match
+DONE dbus_bus_request_name
+DONE dbus_bus_set_unique_name
+DONE dbus_bus_start_service_by_name
 dbus_connection_add_filter
 dbus_connection_allocate_data_slot
 dbus_connection_borrow_message

@@ -1,1 +1,6 @@
 libdbus stub library to appease dbus dependency
+
+
+TODO:
+
+- [ ] Go through ./symbols and implement stubs for everything.

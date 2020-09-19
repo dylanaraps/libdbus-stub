@@ -7,14 +7,8 @@ XCFLAGS = -std=c99 -O3 \
 		  $(CFLAGS) $(CPPFLAGS)
 
 OBJ = \
-	  dbus/dbus-address.o
-
-HDR = \
-	  dbus/dbus-address.h \
-	  dbus/dbus-errors.h \
-	  dbus/dbus-macros.h \
-	  dbus/dbus-types.h \
-	  dbus/dbus.h
+	  dbus/dbus-address.o \
+	  dbus/dbus-bus.o
 
 all: libdbus.so
 
@@ -23,8 +17,6 @@ all: libdbus.so
 
 libdbus.so: $(OBJ)
 	$(CC) $(XCFLAGS) -o $@ $(OBJ) $(LDFLAGS) -shared -Wl,-soname,libdbus.so.1
-
-$(OBJ): $(HDR)
 
 clean:
 	rm -f libdbus.* $(OBJ)

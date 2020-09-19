@@ -7,7 +7,6 @@
 
 #include <dbus/dbus-macros.h>
 #include <dbus/dbus-types.h>
-/* #include <dbus/dbus-protocol.h> */
 
 #ifdef __cplusplus
 extern "C" {
