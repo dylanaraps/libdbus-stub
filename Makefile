@@ -1,10 +1,9 @@
 .POSIX:
 
 PREFIX  = /usr/local
-XCFLAGS = -std=c99 -O3 \
+XCFLAGS = -std=c99 -O3 -DDBUS_COMPILATION -I. \
 		  -Wall -Wextra -pedantic -Wmissing-prototypes -Wstrict-prototypes \
-		  -Wno-unused-parameter -DDBUS_COMPILATION -I$(PWD) \
-		  $(CFLAGS) $(CPPFLAGS)
+		  -Wno-unused-parameter $(CFLAGS) $(CPPFLAGS)
 
 OBJ = \
 	  dbus/dbus-address.o \
