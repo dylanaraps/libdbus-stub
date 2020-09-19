@@ -19,6 +19,40 @@ extern "C" {
 typedef struct DBusMessage DBusMessage;
 typedef struct DBusMessageIter DBusMessageIter;
 
+struct DBusMessageIter {
+    void *dummy1;
+    void *dummy2;
+    dbus_uint32_t dummy3;
+    int dummy4;
+    int dummy5;
+    int dummy6;
+    int dummy7;
+    int dummy8;
+    int dummy9;
+    int dummy10;
+    int dummy11;
+    int pad1;
+    void *pad2;
+    void *pad3;
+};
+
+#define DBUS_MESSAGE_ITER_INIT_CLOSED { \
+    NULL, /* dummy1 */  \
+    NULL, /* dummy2 */  \
+    0,    /* dummy3 */  \
+    0,    /* dummy4 */  \
+    0,    /* dummy5 */  \
+    0,    /* dummy6 */  \
+    0,    /* dummy7 */  \
+    0,    /* dummy8 */  \
+    0,    /* dummy9 */  \
+    0,    /* dummy10 */ \
+    0,    /* dummy11 */ \
+    0,    /* pad1 */    \
+    NULL, /* pad2 */    \
+    NULL  /* pad3 */    \
+}
+
 DBusMessage* dbus_message_new(
     int message_type
 );
