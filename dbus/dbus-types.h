@@ -12,6 +12,7 @@ typedef uint32_t dbus_uint32_t;
 typedef uint32_t dbus_unichar_t;
 typedef uint32_t dbus_bool_t;
 typedef short dbus_int16_t;
+typedef unsigned short dbus_uint16_t;
 
 
 #endif
