@@ -12,7 +12,8 @@ OBJ = \
 	  dbus/dbus-errors.o \
 	  dbus/dbus-memory.o \
 	  dbus/dbus-misc.o \
-	  dbus/dbus-message.o
+	  dbus/dbus-message.o \
+	  dbus/dbus-pending-call.o
 
 all: libdbus.so
 
