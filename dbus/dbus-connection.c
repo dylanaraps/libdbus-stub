@@ -53,7 +53,7 @@ dbus_bool_t dbus_connection_get_is_anonymous(
 char* dbus_connection_get_server_id(
     DBusConnection *connection
 ) {
-    return NULL;
+    return "org_freedesktop_general";
 }
 
 dbus_bool_t dbus_connection_can_send_type(
