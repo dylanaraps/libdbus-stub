@@ -15,6 +15,19 @@
 extern "C" {
 #endif
 
+typedef enum {
+    DBUS_WATCH_READABLE = 1 << 0,
+    DBUS_WATCH_WRITABLE = 1 << 1,
+    DBUS_WATCH_ERROR    = 1 << 2,
+    DBUS_WATCH_HANGUP   = 1 << 3
+} DBusWatchFlags;
+
+typedef enum {
+    DBUS_DISPATCH_DATA_REMAINS,
+    DBUS_DISPATCH_COMPLETE,
+    DBUS_DISPATCH_NEED_MEMORY
+} DBusDispatchStatus;
+
 typedef struct DBusWatch DBusWatch;
 typedef struct DBusTimeout DBusTimeout;
 typedef struct DBusPreallocatedSend DBusPreallocatedSend;
@@ -41,12 +54,6 @@ struct DBusObjectPathVTable {
     void (* dbus_internal_pad3) (void *);
     void (* dbus_internal_pad4) (void *);
 };
-
-typedef enum  {
-    DBUS_DISPATCH_DATA_REMAINS,
-    DBUS_DISPATCH_COMPLETE,
-    DBUS_DISPATCH_NEED_MEMORY
-} DBusDispatchStatus;
 
 typedef dbus_bool_t (* DBusAddWatchFunction) (
     DBusWatch *watch,
