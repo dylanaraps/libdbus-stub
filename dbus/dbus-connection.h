@@ -22,6 +22,26 @@ typedef struct DBusPendingCall DBusPendingCall;
 typedef struct DBusConnection DBusConnection;
 typedef struct DBusObjectPathVTable DBusObjectPathVTable;
 
+typedef void (* DBusObjectPathUnregisterFunction) (
+    DBusConnection  *connection,
+    void *user_data
+);
+
+typedef DBusHandlerResult (* DBusObjectPathMessageFunction) (
+    DBusConnection *connection,
+    DBusMessage *message,
+    void *user_data
+);
+
+struct DBusObjectPathVTable {
+    DBusObjectPathUnregisterFunction unregister_function;
+    DBusObjectPathMessageFunction message_function;
+    void (* dbus_internal_pad1) (void *);
+    void (* dbus_internal_pad2) (void *);
+    void (* dbus_internal_pad3) (void *);
+    void (* dbus_internal_pad4) (void *);
+};
+
 typedef enum  {
     DBUS_DISPATCH_DATA_REMAINS,
     DBUS_DISPATCH_COMPLETE,
