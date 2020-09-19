@@ -10,10 +10,10 @@ OBJ = \
 	  dbus/dbus-address.o
 
 HDR = \
-	  dbus/dbus-types.h \
+	  dbus/dbus-address.h \
 	  dbus/dbus-errors.h \
 	  dbus/dbus-macros.h \
-	  dbus/dbus-address.h \
+	  dbus/dbus-types.h \
 	  dbus/dbus.h
 
 all: libdbus.so
@@ -26,11 +26,7 @@ libdbus.so: $(OBJ)
 
 $(OBJ): $(HDR)
 
-install: libdbus.so
-	mkdir -p $(DESTDIR)$(PREFIX)/lib
-	cp liddbus.* $(DESTDIR)$(PREFIX)/lib/
-
 clean:
 	rm -f libdbus.* $(OBJ)
 
-.PHONY: all clean install
+.PHONY: all clea
