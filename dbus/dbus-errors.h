@@ -43,8 +43,8 @@ void dbus_set_error_const(
 );
 
 void dbus_move_error(
-    DBusError       *src,
-    DBusError       *dest
+    DBusError *src,
+    DBusError *dest
 );
 
 dbus_bool_t dbus_error_has_name(

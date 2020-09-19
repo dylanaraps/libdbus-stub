@@ -8,7 +8,8 @@ XCFLAGS = -std=c99 -O3 -DDBUS_COMPILATION -I. \
 OBJ = \
 	  dbus/dbus-address.o \
 	  dbus/dbus-bus.o \
-	  dbus/dbus-connection.o
+	  dbus/dbus-connection.o \
+	  dbus/dbus-errors.o
 
 all: libdbus.so
 
