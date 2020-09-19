@@ -4,18 +4,14 @@ DBusConnection *dbus_connection_open(
     const char *address,
     DBusError *error
 ) {
-    DBusConnection *connection = {0};
-
-    return connection;
+    return NULL;
 }
 
 DBusConnection* dbus_connection_open_private(
     const char *address,
     DBusError *error
 ) {
-    DBusConnection *connection = {0};
-
-    return connection;
+    return NULL;
 }
 
 DBusConnection* dbus_connection_ref(
@@ -57,14 +53,14 @@ dbus_bool_t dbus_connection_get_is_anonymous(
 char* dbus_connection_get_server_id(
     DBusConnection *connection
 ) {
-    return NULL;
+    return "org_freedesktop_general";
 }
 
 dbus_bool_t dbus_connection_can_send_type(
     DBusConnection *connection,
     int type
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_set_exit_on_disconnect(
@@ -135,7 +131,7 @@ DBusDispatchStatus dbus_connection_dispatch(
 dbus_bool_t dbus_connection_has_messages_to_send(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_send(
