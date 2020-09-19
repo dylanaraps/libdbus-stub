@@ -224,12 +224,12 @@ DONE dbus_type_is_basic
 DONE dbus_type_is_container
 DONE dbus_type_is_fixed
 DONE dbus_type_is_valid
-dbus_validate_bus_name
-dbus_validate_error_name
-dbus_validate_interface
-dbus_validate_member
-dbus_validate_path
-dbus_validate_utf8
+DONE dbus_validate_bus_name
+DONE dbus_validate_error_name
+DONE dbus_validate_interface
+DONE dbus_validate_member
+DONE dbus_validate_path
+DONE dbus_validate_utf8
 DONE dbus_watch_get_data
 DONE dbus_watch_get_enabled
 DONE dbus_watch_get_fd

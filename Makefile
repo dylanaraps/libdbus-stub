@@ -11,11 +11,12 @@ OBJ = \
 	  dbus/dbus-connection.o \
 	  dbus/dbus-errors.o \
 	  dbus/dbus-memory.o \
-	  dbus/dbus-misc.o \
 	  dbus/dbus-message.o \
+	  dbus/dbus-misc.o \
 	  dbus/dbus-pending-call.o \
 	  dbus/dbus-server.o \
 	  dbus/dbus-signature.o \
+	  dbus/dbus-syntax.o \
 	  dbus/dbus-threads.o
 
 all: libdbus.so
