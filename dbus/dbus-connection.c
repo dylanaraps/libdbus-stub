@@ -35,13 +35,13 @@ void dbus_connection_close(
 dbus_bool_t dbus_connection_get_is_connected(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_is_authenticated(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_is_anonymous(
@@ -60,7 +60,7 @@ dbus_bool_t dbus_connection_can_send_type(
     DBusConnection *connection,
     int type
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_set_exit_on_disconnect(
@@ -80,14 +80,14 @@ dbus_bool_t dbus_connection_read_write_dispatch(
     DBusConnection *connection,
     int timeout_milliseconds
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_read_write(
     DBusConnection *connection,
     int timeout_milliseconds
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 DBusMessage* dbus_connection_borrow_message(
@@ -131,7 +131,7 @@ DBusDispatchStatus dbus_connection_dispatch(
 dbus_bool_t dbus_connection_has_messages_to_send(
     DBusConnection *connection
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_send(
@@ -139,7 +139,7 @@ dbus_bool_t dbus_connection_send(
     DBusMessage *message,
     dbus_uint32_t *client_serial
 ) {
-    return FALSE; /* TRUE? */
+    return TRUE; /* TRUE? */
 }
 
 dbus_bool_t dbus_connection_send_with_reply(
@@ -148,7 +148,7 @@ dbus_bool_t dbus_connection_send_with_reply(
     DBusPendingCall **pending_return,
     int timeout_milliseconds
 ) {
-    return FALSE; /* TRUE? */
+    return TRUE; /* TRUE? */
 }
 
 DBusMessage *dbus_connection_send_with_reply_and_block(
@@ -157,7 +157,7 @@ DBusMessage *dbus_connection_send_with_reply_and_block(
     int timeout_milliseconds,
     DBusError *error
 ) {
-    return FALSE; /* TRUE? */
+    return NULL;
 }
 
 dbus_bool_t dbus_connection_set_watch_functions(
@@ -168,7 +168,7 @@ dbus_bool_t dbus_connection_set_watch_functions(
     void *data,
     DBusFreeFunction free_data_function
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_set_timeout_functions(
@@ -179,7 +179,7 @@ dbus_bool_t dbus_connection_set_timeout_functions(
     void *data,
     DBusFreeFunction free_data_function
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_set_wakeup_main_function(
@@ -204,14 +204,14 @@ dbus_bool_t dbus_connection_get_unix_user(
     DBusConnection *connection,
     unsigned long *uid
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_unix_process_id(
     DBusConnection *connection,
     unsigned long *pid
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_adt_audit_session_data(
@@ -219,7 +219,7 @@ dbus_bool_t dbus_connection_get_adt_audit_session_data(
     void **data,
     dbus_int32_t *data_size
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_set_unix_user_function(
@@ -235,7 +235,7 @@ dbus_bool_t dbus_connection_get_windows_user(
     DBusConnection *connection,
     char **windows_sid_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_set_windows_user_function(
@@ -267,7 +267,7 @@ dbus_bool_t dbus_connection_add_filter(
     void *user_data,
     DBusFreeFunction free_data_function
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_remove_filter(
@@ -281,7 +281,7 @@ void dbus_connection_remove_filter(
 dbus_bool_t dbus_connection_allocate_data_slot(
     dbus_int32_t *slot_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_connection_free_data_slot(
@@ -296,7 +296,7 @@ dbus_bool_t dbus_connection_set_data(
     void *data,
     DBusFreeFunction free_data_func
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void* dbus_connection_get_data(
@@ -405,7 +405,7 @@ dbus_bool_t dbus_connection_try_register_object_path(
     void *user_data,
     DBusError *error
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_register_object_path(
@@ -414,7 +414,7 @@ dbus_bool_t dbus_connection_register_object_path(
     const DBusObjectPathVTable *vtable,
     void *user_data
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_try_register_fallback(
@@ -424,7 +424,7 @@ dbus_bool_t dbus_connection_try_register_fallback(
     void *user_data,
     DBusError *error
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_register_fallback(
@@ -433,14 +433,14 @@ dbus_bool_t dbus_connection_register_fallback(
     const DBusObjectPathVTable *vtable,
     void *user_data
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_unregister_object_path(
     DBusConnection *connection,
     const char *path
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_object_path_data(
@@ -448,7 +448,7 @@ dbus_bool_t dbus_connection_get_object_path_data(
     const char *path,
     void **data_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_list_registered(
@@ -456,21 +456,21 @@ dbus_bool_t dbus_connection_list_registered(
     const char *parent_path,
     char ***child_entries
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_unix_fd(
     DBusConnection *connection,
     int *fd
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_connection_get_socket(
     DBusConnection *connection,
     int *fd
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 int dbus_watch_get_unix_fd(
@@ -509,13 +509,13 @@ dbus_bool_t dbus_watch_handle(
     DBusWatch *watch,
     unsigned int flags
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_watch_get_enabled(
     DBusWatch *watch
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 int dbus_timeout_get_interval(
@@ -541,12 +541,12 @@ void dbus_timeout_set_data(
 dbus_bool_t dbus_timeout_handle(
     DBusTimeout *timeout
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_timeout_get_enabled(
     DBusTimeout *timeout
 ) {
-    return FALSE;
+    return TRUE;
 }
 
