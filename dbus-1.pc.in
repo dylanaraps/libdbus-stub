@@ -2,8 +2,8 @@ original_prefix=/usr
 prefix=${original_prefix}
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
+libdir=@libdir@
+includedir=@includedir@
 system_bus_default_address=unix:path=/usr/var/run/dbus/system_bus_socket
 datarootdir=${prefix}/share
 datadir=${datarootdir}

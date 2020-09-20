@@ -29,15 +29,21 @@ all: libdbus-1.so libdbus-1.a
 	$(CC) $(XCFLAGS) -c -o $@ $<
 
 libdbus-1.so: $(OBJ)
-	$(CC) $(XCFLAGS) -o $@ $(OBJ) $(LDFLAGS) -shared -Wl,-soname,libdbus-1.so.1
+	$(CC) $(XCFLAGS) -o $@ $(OBJ) $(LDFLAGS) -shared
 
 libdbus-1.a: $(OBJ)
 	$(AR) -rc $@ $(OBJ)
 
+dbus-1.pc: dbus-1.pc.in
+	sed \
+		-e 's|@libdir@|${LIBDIR}|g' \
+		-e 's|@includedir@|${INCLUDEDIR}|g' \
+	dbus-1.pc.in > dbus-1.pc
+
 clean:
 	rm -f libdbus-1.* $(OBJ)
 
-install:
+install: dbus-1.pc
 	mkdir -p $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus
 	mkdir -p $(DESTDIR)$(LIBDIR)/pkgconfig
 	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus

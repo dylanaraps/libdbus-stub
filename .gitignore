@@ -1,3 +1,4 @@
 *.so
 *.a
 dbus/*.o
+dbus-1.pc
