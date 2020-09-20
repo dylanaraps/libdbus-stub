@@ -414,9 +414,6 @@ dbus_bool_t dbus_connection_try_register_object_path(
     void *user_data,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
     return TRUE;
 }
 
@@ -436,9 +433,6 @@ dbus_bool_t dbus_connection_try_register_fallback(
     void *user_data,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
     return TRUE;
 }
 
