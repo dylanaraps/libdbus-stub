@@ -2,8 +2,8 @@
 #  error "Only <dbus/dbus.h> can be included directly."
 #endif
 
-#ifndef DBUS_ADDRESS_H
-#define DBUS_ADDRESS_H
+#ifndef DBUS_PENDING_CALL_H
+#define DBUS_PENDING_CALL_H
 
 #include <dbus/dbus-macros.h>
 #include <dbus/dbus-types.h>
