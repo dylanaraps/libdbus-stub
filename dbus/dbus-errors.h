@@ -18,6 +18,12 @@ typedef struct DBusError DBusError;
 struct DBusError {
     const char *name;
     const char *message;
+    unsigned int dummy1 : 1;
+    unsigned int dummy2 : 1;
+    unsigned int dummy3 : 1;
+    unsigned int dummy4 : 1;
+    unsigned int dummy5 : 1;
+    void *padding1;
 };
 
 #define DBUS_ERROR_INIT { NULL, NULL, TRUE, 0, 0, 0, 0, NULL }
