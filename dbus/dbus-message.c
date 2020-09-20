@@ -74,7 +74,7 @@ dbus_bool_t dbus_message_set_path(
     DBusMessage *message,
     const char *object_path
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_path(
@@ -87,14 +87,14 @@ dbus_bool_t dbus_message_has_path(
     DBusMessage *message,
     const char *object_path
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_set_interface(
     DBusMessage *message,
     const char *iface
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_interface(
@@ -107,14 +107,14 @@ dbus_bool_t dbus_message_has_interface(
     DBusMessage *message,
     const char *iface
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_set_member(
     DBusMessage *message,
     const char *member
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_member(
@@ -127,14 +127,14 @@ dbus_bool_t dbus_message_has_member(
     DBusMessage *message,
     const char  *member
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_set_error_name(
     DBusMessage *message,
     const char *name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_error_name(
@@ -147,7 +147,7 @@ dbus_bool_t dbus_message_set_destination(
     DBusMessage *message,
     const char *destination
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_destination(
@@ -160,7 +160,7 @@ dbus_bool_t dbus_message_set_sender(
     DBusMessage *message,
     const char *sender
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_message_get_sender(
@@ -185,7 +185,7 @@ void dbus_message_set_no_reply(
 dbus_bool_t dbus_message_get_no_reply(
     DBusMessage *message
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_is_method_call(
@@ -193,7 +193,7 @@ dbus_bool_t dbus_message_is_method_call(
     const char *iface,
     const char *method
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_is_signal(
@@ -201,35 +201,35 @@ dbus_bool_t dbus_message_is_signal(
     const char *iface,
     const char *signal_name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_is_error(
     DBusMessage *message,
     const char *error_name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_has_destination(
     DBusMessage *message,
     const char *bus_name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_has_sender(
     DBusMessage *message,
     const char *unique_bus_name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_has_signature(
     DBusMessage *message,
     const char *signature
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_uint32_t dbus_message_get_serial(
@@ -249,7 +249,7 @@ dbus_bool_t dbus_message_set_reply_serial(
     DBusMessage *message,
     dbus_uint32_t reply_serial
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_uint32_t dbus_message_get_reply_serial(
@@ -266,14 +266,14 @@ void dbus_message_set_auto_start(
 dbus_bool_t dbus_message_get_auto_start(
     DBusMessage *message
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_get_path_decomposed(
     DBusMessage *message,
     char ***path
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char *dbus_message_get_container_instance(
@@ -286,7 +286,7 @@ dbus_bool_t dbus_message_set_container_instance(
     DBusMessage *message,
     const char  *object_path
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_append_args(
@@ -294,7 +294,7 @@ dbus_bool_t dbus_message_append_args(
     int first_arg_type,
     ...
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_append_args_valist(
@@ -302,7 +302,7 @@ dbus_bool_t dbus_message_append_args_valist(
     int first_arg_type,
     va_list var_args
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_get_args(
@@ -311,10 +311,7 @@ dbus_bool_t dbus_message_get_args(
     int first_arg_type,
     ...
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_get_args_valist(
@@ -323,16 +320,13 @@ dbus_bool_t dbus_message_get_args_valist(
     int first_arg_type,
     va_list var_args
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_contains_unix_fds(
     DBusMessage *message
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_message_iter_init_closed(
@@ -345,19 +339,19 @@ dbus_bool_t dbus_message_iter_init(
     DBusMessage *message,
     DBusMessageIter *iter
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_iter_has_next(
     DBusMessageIter *iter
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_iter_next(
     DBusMessageIter *iter
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 char* dbus_message_iter_get_signature(
@@ -418,7 +412,7 @@ dbus_bool_t dbus_message_iter_append_basic(
     int type,
     const void *value
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_iter_append_fixed_array(
@@ -427,7 +421,7 @@ dbus_bool_t dbus_message_iter_append_fixed_array(
     const void *value,
     int n_elements
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_iter_open_container(
@@ -436,14 +430,14 @@ dbus_bool_t dbus_message_iter_open_container(
     const char *contained_signature,
     DBusMessageIter *sub
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_iter_close_container(
     DBusMessageIter *iter,
     DBusMessageIter *sub
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_message_iter_abandon_container(
@@ -470,16 +464,13 @@ dbus_bool_t dbus_set_error_from_message(
     DBusError *error,
     DBusMessage *message
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_message_allocate_data_slot(
     dbus_int32_t *slot_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_message_free_data_slot(
@@ -494,7 +485,7 @@ dbus_bool_t dbus_message_set_data(
     void *data,
     DBusFreeFunction free_data_func
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void* dbus_message_get_data(
@@ -521,7 +512,7 @@ dbus_bool_t dbus_message_marshal(
     char **marshalled_data_p,
     int *len_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 DBusMessage* dbus_message_demarshal(
@@ -552,5 +543,5 @@ void dbus_message_set_allow_interactive_authorization(
 dbus_bool_t dbus_message_get_allow_interactive_authorization(
     DBusMessage *message
 ) {
-    return FALSE;
+    return TRUE;
 }
