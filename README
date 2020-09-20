@@ -1,4 +1,5 @@
-libdbus stub library to appease dbus dependency
+dbus stub library for software that depends on dbus but is largely
+functional without it.
 
 TODO:
 
@@ -7,3 +8,4 @@ TODO:
 - [x] Make pkg-config file configurable.
 - [ ] Figure out where we want to spoof return values.
 - [ ] Figure out what else is missing.
+
