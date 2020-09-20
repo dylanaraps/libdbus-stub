@@ -49,5 +49,6 @@ install: dbus-1.pc
 	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus
 	cp -f libdbus-1.* $(DESTDIR)$(LIBDIR)
 	cp -f dbus-1.pc   $(DESTDIR)$(LIBDIR)/pkgconfig
+	ln -sf libdbus-1.so $(DESTDIR)$(LIBDIR)/libdbus-1.so.3
 
 .PHONY: all clean install
