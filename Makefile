@@ -1,9 +1,13 @@
 .POSIX:
 
-PREFIX  = /usr/local
-XCFLAGS = -std=c99 -O3 -DDBUS_COMPILATION -I. \
-		  -Wall -Wextra -pedantic -Wmissing-prototypes -Wstrict-prototypes \
-		  -Wno-unused-parameter $(CFLAGS) $(CPPFLAGS)
+PREFIX     = /usr/local
+LIBDIR     = ${PREFIX}/lib
+INCLUDEDIR = ${PREFIX}/include
+
+XCFLAGS = \
+	  -std=c99 -O3 -DDBUS_COMPILATION -I. \
+	  -Wall -Wextra -pedantic -Wmissing-prototypes -Wstrict-prototypes \
+	  -Wno-unused-parameter $(CFLAGS) $(CPPFLAGS)
 
 OBJ = \
 	  dbus/dbus-address.o \
@@ -33,4 +37,10 @@ libdbus-1.a: $(OBJ)
 clean:
 	rm -f libdbus-1.* $(OBJ)
 
-.PHONY: all clea
+install:
+	mkdir -p $(DESTDIR)$(INCLUDEDIR)/dbus-1 $(DESTDIR)$(LIBDIR)/pkgconfig
+	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1
+	cp -f libdbus-1.* $(DESTDIR)$(LIBDIR)
+	cp -f dbus-1.pc   $(DESTDIR)$(LIBDIR)/pkgconfig
+
+.PHONY: all clean install
