@@ -38,7 +38,8 @@ clean:
 	rm -f libdbus-1.* $(OBJ)
 
 install:
-	mkdir -p $(DESTDIR)$(INCLUDEDIR)/dbus-1 $(DESTDIR)$(LIBDIR)/pkgconfig
+	mkdir -p $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus
+	mkdir -p $(DESTDIR)$(LIBDIR)/pkgconfig
 	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1
 	cp -f libdbus-1.* $(DESTDIR)$(LIBDIR)
 	cp -f dbus-1.pc   $(DESTDIR)$(LIBDIR)/pkgconfig
