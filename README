@@ -1,15 +1,9 @@
 libdbus stub library to appease dbus dependency
 
-
 TODO:
 
 - [x] Go through ./symbols and implement stubs for everything.
+- [x] Finalize headers for dbus.h.
+- [x] Make pkg-config file configurable.
 - [ ] Figure out where we want to spoof return values.
-- [ ] Finalize headers for dbus.h.
 - [ ] Figure out what else is missing.
-- [ ] Make pkg-config file configurable.
-
-
-Application support:
-
-- TODO
