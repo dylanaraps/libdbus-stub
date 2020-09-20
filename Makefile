@@ -40,7 +40,7 @@ clean:
 install:
 	mkdir -p $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus
 	mkdir -p $(DESTDIR)$(LIBDIR)/pkgconfig
-	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1.0
+	cp -f dbus/*.h    $(DESTDIR)$(INCLUDEDIR)/dbus-1.0/dbus
 	cp -f libdbus-1.* $(DESTDIR)$(LIBDIR)
 	cp -f dbus-1.pc   $(DESTDIR)$(LIBDIR)/pkgconfig
 
