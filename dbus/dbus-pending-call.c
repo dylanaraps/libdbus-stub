@@ -18,7 +18,7 @@ dbus_bool_t dbus_pending_call_set_notify(
     void *user_data,
     DBusFreeFunction free_user_data
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_pending_call_cancel(
@@ -30,7 +30,7 @@ void dbus_pending_call_cancel(
 dbus_bool_t dbus_pending_call_get_completed(
     DBusPendingCall *pending
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 DBusMessage* dbus_pending_call_steal_reply(
@@ -48,7 +48,7 @@ void dbus_pending_call_block(
 dbus_bool_t dbus_pending_call_allocate_data_slot(
     dbus_int32_t *slot_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_pending_call_free_data_slot(
@@ -63,7 +63,7 @@ dbus_bool_t dbus_pending_call_set_data(
     void *data,
     DBusFreeFunction free_data_func
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void* dbus_pending_call_get_data(

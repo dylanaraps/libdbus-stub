@@ -63,7 +63,7 @@ dbus_bool_t dbus_server_set_watch_functions(
     void *data,
     DBusFreeFunction free_data_function
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_server_set_timeout_functions(
@@ -74,20 +74,20 @@ dbus_bool_t dbus_server_set_timeout_functions(
     void *data,
     DBusFreeFunction free_data_function
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_server_set_auth_mechanisms(
     DBusServer *server,
     const char **mechanisms
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_server_allocate_data_slot(
     dbus_int32_t *slot_p
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_server_free_data_slot(
@@ -102,7 +102,7 @@ dbus_bool_t dbus_server_set_data(
     void *data,
     DBusFreeFunction free_data_func
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void* dbus_server_get_data(

@@ -6,10 +6,7 @@ dbus_bool_t dbus_parse_address(
     int *array_len,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 const char *dbus_address_entry_get_value(

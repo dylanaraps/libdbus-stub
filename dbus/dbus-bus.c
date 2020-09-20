@@ -24,17 +24,14 @@ dbus_bool_t dbus_bus_register(
     DBusConnection *connection,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_bus_set_unique_name(
     DBusConnection *connection,
     const char *unique_name
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 const char* dbus_bus_get_unique_name(
@@ -92,10 +89,7 @@ dbus_bool_t dbus_bus_name_has_owner(
     const char *name,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_bus_start_service_by_name(
@@ -105,10 +99,7 @@ dbus_bool_t dbus_bus_start_service_by_name(
     uint32_t *reply,
     DBusError *error
 ) {
-    error->name    = DBUS_ERROR_FAILED;
-    error->message = "stub";
-
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_bus_add_match(

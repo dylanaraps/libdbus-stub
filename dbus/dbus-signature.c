@@ -28,7 +28,7 @@ int dbus_signature_iter_get_element_type(
 dbus_bool_t dbus_signature_iter_next(
     DBusSignatureIter *iter
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 void dbus_signature_iter_recurse(
@@ -55,23 +55,23 @@ dbus_bool_t dbus_signature_validate_single(
 dbus_bool_t dbus_type_is_valid(
     int typecode
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_type_is_basic(
     int typecode
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_type_is_container(
     int typecode
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_type_is_fixed(
     int typecode
 ) {
-    return FALSE;
+    return TRUE;
 }
