@@ -42,14 +42,14 @@ dbus_bool_t dbus_signature_validate(
     const char *signature,
     DBusError*error
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_signature_validate_single(
     const char *signature,
     DBusError*error
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 dbus_bool_t dbus_type_is_valid(

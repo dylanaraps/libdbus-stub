@@ -4,6 +4,9 @@ DBusServer* dbus_server_listen(
     const char *address,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return NULL;
 }
 

@@ -4,6 +4,9 @@ DBusConnection *dbus_connection_open(
     const char *address,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return NULL;
 }
 
@@ -11,6 +14,9 @@ DBusConnection* dbus_connection_open_private(
     const char *address,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return NULL;
 }
 
@@ -157,6 +163,9 @@ DBusMessage *dbus_connection_send_with_reply_and_block(
     int timeout_milliseconds,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return NULL;
 }
 
@@ -405,6 +414,9 @@ dbus_bool_t dbus_connection_try_register_object_path(
     void *user_data,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return TRUE;
 }
 
@@ -424,6 +436,9 @@ dbus_bool_t dbus_connection_try_register_fallback(
     void *user_data,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return TRUE;
 }
 

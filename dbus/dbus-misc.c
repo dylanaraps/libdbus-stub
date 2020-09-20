@@ -3,7 +3,7 @@
 char* dbus_get_local_machine_id(
     void
 ) {
-    return NULL;
+    return "00000000000000000000000000000001";
 }
 
 void dbus_get_version(
@@ -18,11 +18,11 @@ dbus_bool_t dbus_setenv(
     const char *variable,
     const char *value
 ) {
-    return FALSE;
+    return TRUE;
 }
 
 char *dbus_try_get_local_machine_id(
     DBusError *error
 ) {
-    return FALSE;
+    return dbus_get_local_machine_id();
 }

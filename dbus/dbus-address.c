@@ -6,6 +6,9 @@ dbus_bool_t dbus_parse_address(
     int *array_len,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return FALSE;
 }
 
@@ -38,5 +41,8 @@ char* dbus_address_unescape_value(
     const char *value,
     DBusError  *error
 ) {
-    return NULL;
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
+    return NULL; // no memory.
 }

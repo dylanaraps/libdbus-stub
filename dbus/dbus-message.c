@@ -311,6 +311,9 @@ dbus_bool_t dbus_message_get_args(
     int first_arg_type,
     ...
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return FALSE;
 }
 
@@ -320,6 +323,9 @@ dbus_bool_t dbus_message_get_args_valist(
     int first_arg_type,
     va_list var_args
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return FALSE;
 }
 
@@ -464,6 +470,9 @@ dbus_bool_t dbus_set_error_from_message(
     DBusError *error,
     DBusMessage *message
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return FALSE;
 }
 
@@ -520,6 +529,9 @@ DBusMessage* dbus_message_demarshal(
     int len,
     DBusError *error
 ) {
+    error->name    = DBUS_ERROR_FAILED;
+    error->message = "stub";
+
     return NULL;
 }
 

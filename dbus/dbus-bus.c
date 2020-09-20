@@ -5,7 +5,7 @@ DBusConnection *dbus_bus_get(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return NULL;
 }
@@ -15,7 +15,7 @@ DBusConnection *dbus_bus_get_private(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return NULL;
 }
@@ -25,7 +25,7 @@ dbus_bool_t dbus_bus_register(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return FALSE;
 }
@@ -49,7 +49,7 @@ unsigned long dbus_bus_get_unix_user(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return ((unsigned)-1);
 }
@@ -59,7 +59,7 @@ char* dbus_bus_get_id(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return NULL;
 }
@@ -71,7 +71,7 @@ int dbus_bus_request_name(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return -1;
 }
@@ -82,7 +82,7 @@ int dbus_bus_release_name(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return -1;
 }
@@ -93,7 +93,7 @@ dbus_bool_t dbus_bus_name_has_owner(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return FALSE;
 }
@@ -106,7 +106,7 @@ dbus_bool_t dbus_bus_start_service_by_name(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 
     return FALSE;
 }
@@ -117,7 +117,7 @@ void dbus_bus_add_match(
     DBusError  *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 }
 
 void dbus_bus_remove_match(
@@ -126,5 +126,5 @@ void dbus_bus_remove_match(
     DBusError *error
 ) {
     error->name    = DBUS_ERROR_FAILED;
-    error->message = "";
+    error->message = "stub";
 }
